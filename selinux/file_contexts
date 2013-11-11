@@ -22,7 +22,7 @@
 /dev/ttyO0                                  u:object_r:gps_device:s0
 
 # Sensors
-/dev/i2c-4                                  u:object_r:sensors_device:s0
+#/dev/i2c-4                                  u:object_r:sensors_device:s0
 
 # Wifi
 /dev/rfkill                                 u:object_r:rfkill_device:s0
