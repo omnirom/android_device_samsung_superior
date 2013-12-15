@@ -39,7 +39,8 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/audio_effects.conf:system/etc/audio_effects.conf \
     $(LOCAL_PATH)/configs/audio_policy.conf:system/etc/audio_policy.conf \
-    $(LOCAL_PATH)/configs/tiny_hw.xml:system/etc/sound/superior
+    $(LOCAL_PATH)/configs/tiny_hw.xml:system/etc/sound/superior \
+    $(LOCAL_PATH)/audio/silence.wav:system/etc/sound/silence.wav
 
 # Bluetooth configuration files
 #PRODUCT_COPY_FILES += \
@@ -146,7 +147,8 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.opengles.version=131072 \
     ro.zygote.disable_gl_preload=1 \
-    ro.bq.gpu_to_cpu_unsupported=1
+    ro.bq.gpu_to_cpu_unsupported=1 \
+    ro.zygote.disable_gl_preload=true
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.sf.lcd_density=320

@@ -29,7 +29,7 @@ TARGET_BOARD_INFO_FILE ?= device/samsung/superior/board-info.txt
 
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_KERNEL_BASE := 0x80000000
-BOARD_KERNEL_CMDLINE := console=ttyO2,115200n8 mem=1024M androidboot.console=ttyO2 vram=20M omapfb.vram=0:16M
+BOARD_KERNEL_CMDLINE := console=ttyO2,115200n8 mem=1024M androidboot.console=ttyO2 vram=20M omapfb.vram=0:16M androidboot.selinux=permissive
 
 # Inline kernel building
 TARGET_KERNEL_SOURCE := kernel/samsung/piranha
@@ -56,6 +56,9 @@ BOARD_HARDWARE_CLASS := device/samsung/superior/cmhw
 # Egl
 BOARD_EGL_CFG := device/samsung/superior/configs/egl.cfg
 USE_OPENGL_RENDERER := true
+
+# Force the screenshot path to CPU consumer
+COMMON_GLOBAL_CFLAGS += -DFORCE_SCREENSHOT_CPU_PATH
 
 # Camera
 BOARD_CAMERA_HAVE_ISO := true
@@ -101,10 +104,10 @@ BOARD_BLUEDROID_VENDOR_CONF := device/samsung/superior/bluetooth/vnd_superior.tx
 BOARD_USES_SECURE_SERVICES := true
 
 # Selinux
-BOARD_SEPOLICY_DIRS := \
+BOARD_SEPOLICY_DIRS += \
     device/samsung/superior/selinux
 
-BOARD_SEPOLICY_UNION := \
+BOARD_SEPOLICY_UNION += \
     file_contexts \
     file.te \
     device.te \
@@ -118,6 +121,12 @@ BOARD_SEPOLICY_UNION := \
     vold.te \
     wpa_supplicant.te
 
+# Override healthd HAL
+BOARD_HAL_STATIC_LIBRARIES := libhealthd.piranha
+
+# Needed for blobs
+COMMON_GLOBAL_CFLAGS += -DNEEDS_VECTORIMPL_SYMBOLS
+
 # Recovery
 TARGET_RECOVERY_PIXEL_FORMAT := "BGRA_8888"
 BOARD_CUSTOM_RECOVERY_KEYMAPPING := ../../device/samsung/superior/recovery/recovery_keys.c
@@ -130,9 +139,6 @@ RECOVERY_FSTAB_VERSION := 2
 
 # assert
 TARGET_OTA_ASSERT_DEVICE := superior,GT-I9260
-
-# device-specific extensions to the updater binary
-TARGET_RELEASETOOLS_EXTENSIONS := device/samsung/superior
 
 # Use the non-open-source parts, if they're present
 -include vendor/samsung/superior/BoardConfigVendor.mk
