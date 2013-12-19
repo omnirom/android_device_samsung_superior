@@ -1,6 +1,5 @@
 #
 # Copyright (C) 2012 The CyanogenMod Project
-# Copyright (C) 2013 The OmniROM Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -15,6 +14,6 @@
 # limitations under the License.
 #
 
-PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/aosp_superior.mk \
-    $(LOCAL_DIR)/omni_superior.mk
+$(call inherit-product, device/samsung/superior/full_superior.mk)
+
+PRODUCT_NAME := aosp_superior

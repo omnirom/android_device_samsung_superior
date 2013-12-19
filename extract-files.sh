@@ -106,4 +106,4 @@ EOF
 
 EOF
 
-./../../../device/samsung/piranha/extract-files.sh
+./../../../device/samsung/omap4-common/extract-files.sh

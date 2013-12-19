@@ -15,7 +15,7 @@
 #
 
 # Include common makefile
-$(call inherit-product, device/samsung/piranha/common.mk)
+$(call inherit-product, device/samsung/omap4-common/common.mk)
 
 LOCAL_PATH := device/samsung/superior
 
@@ -70,7 +70,7 @@ PRODUCT_PACKAGES += \
     SamsungServiceMode \
     PinyinIME \
     tinyplay \
-    Torch
+    OmniTorch
 
 # HAL
 PRODUCT_PACKAGES += \
@@ -147,8 +147,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.opengles.version=131072 \
     ro.zygote.disable_gl_preload=1 \
-    ro.bq.gpu_to_cpu_unsupported=1 \
-    ro.zygote.disable_gl_preload=true
+    ro.bq.gpu_to_cpu_unsupported=1
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.sf.lcd_density=320

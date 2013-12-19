@@ -1,5 +1,6 @@
 #
 # Copyright (C) 2012 The CyanogenMod Project
+# Copyright (C) 2013 The OmniROM Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,7 +15,7 @@
 # limitations under the License.
 #
 
--include device/samsung/piranha/BoardConfigCommon.mk
+-include device/samsung/omap4-common/BoardConfigCommon.mk
 
 # This variable is set first, so it can be overridden
 # by BoardConfigVendor.mk
@@ -33,7 +34,7 @@ BOARD_KERNEL_CMDLINE := console=ttyO2,115200n8 mem=1024M androidboot.console=tty
 
 # Inline kernel building
 TARGET_KERNEL_SOURCE := kernel/samsung/piranha
-TARGET_KERNEL_CONFIG := cyanogenmod_superior_defconfig
+TARGET_KERNEL_CONFIG := omni_superior_defconfig
 
 
 # Init
