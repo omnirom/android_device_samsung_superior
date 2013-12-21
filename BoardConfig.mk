@@ -25,7 +25,6 @@ TARGET_NO_BOOTLOADER := true
 TARGET_NO_RADIOIMAGE := true
 
 TARGET_BOARD_OMAP_CPU := 4470
-TARGET_BOARD_OMAP_4470 := true
 TARGET_BOOTLOADER_BOARD_NAME := piranha
 TARGET_BOARD_INFO_FILE ?= device/samsung/superior/board-info.txt
 
@@ -36,7 +35,6 @@ BOARD_KERNEL_CMDLINE := console=ttyO2,115200n8 mem=1024M androidboot.console=tty
 # Inline kernel building
 TARGET_KERNEL_SOURCE := kernel/samsung/piranha
 TARGET_KERNEL_CONFIG := omni_superior_defconfig
-
 
 # Init
 TARGET_PROVIDES_INIT := true
@@ -70,7 +68,10 @@ COMMON_GLOBAL_CFLAGS += -DSAMSUNG_CAMERA_HARDWARE
 
 # Vold
 TARGET_USE_CUSTOM_LUN_FILE_PATH := "/sys/class/android_usb/f_mass_storage/lun%d/file"
+
 # RIL
+BOARD_PROVIDES_LIBRIL := true
+BOARD_MODEM_TYPE := xmm6262
 BOARD_MOBILEDATA_INTERFACE_NAME := "pdp0"
 
 #BOOTANIMATION

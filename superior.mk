@@ -67,6 +67,7 @@ PRODUCT_COPY_FILES += \
 # Packages
 PRODUCT_PACKAGES += \
     com.android.future.usb.accessory \
+    macloader \
     SamsungServiceMode \
     PinyinIME \
     tinyplay \
@@ -83,10 +84,10 @@ PRODUCT_PACKAGES += \
 
 # NFC
 PRODUCT_PACKAGES += \
-        libnfc \
-        libnfc_jni \
-        Nfc \
-        Tag
+    libnfc \
+    libnfc_jni \
+    Nfc \
+    Tag
 
 # RIL
 PRODUCT_PROPERTY_OVERRIDES += \
