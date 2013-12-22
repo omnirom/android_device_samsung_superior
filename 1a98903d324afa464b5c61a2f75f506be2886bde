@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6b8b61a3_c5151c43",
+        "filename": "rootdir/twrp.fstab",
+        "patchSetId": 3
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1000032
+      },
+      "writtenOn": "2013-12-22T04:53:15Z",
+      "side": 1,
+      "message": "canbewiped should NOT be there. We do not want people wiping their /efs partitions.",
+      "revId": "1a98903d324afa464b5c61a2f75f506be2886bde",
+      "serverId": "56841c99-7c94-43d4-bf0b-cb4707e66d55",
+      "unresolved": false
+    }
+  ]
+}
