@@ -25,7 +25,6 @@ TARGET_NO_BOOTLOADER := true
 TARGET_NO_RADIOIMAGE := true
 
 TARGET_BOARD_OMAP_CPU := 4470
-TARGET_BOARD_OMAP_4470 := true
 TARGET_BOOTLOADER_BOARD_NAME := piranha
 TARGET_BOARD_INFO_FILE ?= device/samsung/superior/board-info.txt
 
@@ -52,8 +51,6 @@ BOARD_USERDATAIMAGE_PARTITION_SIZE := 12381585408
 BOARD_FLASH_BLOCK_SIZE := 4096
 TARGET_USERIMAGES_USE_EXT4 := true
 
-# Hardware tunables
-BOARD_HARDWARE_CLASS := device/samsung/superior/cmhw
 
 # Egl
 BOARD_EGL_CFG := device/samsung/superior/configs/egl.cfg
@@ -71,10 +68,9 @@ COMMON_GLOBAL_CFLAGS += -DSAMSUNG_CAMERA_HARDWARE
 # Vold
 TARGET_USE_CUSTOM_LUN_FILE_PATH := "/sys/class/android_usb/f_mass_storage/lun%d/file"
 # RIL
+BOARD_PROVIDES_LIBRIL := true
+BOARD_MODEM_TYPE := xmm6262
 BOARD_MOBILEDATA_INTERFACE_NAME := "pdp0"
-
-#BOOTANIMATION
-PRODUCT_BOOTANIMATION := vendor/cm/prebuilt/common/bootanimation/720.zip
 
 # Wifi
 BOARD_WLAN_DEVICE                := bcmdhd
