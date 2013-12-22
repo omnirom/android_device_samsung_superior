@@ -50,8 +50,6 @@ BOARD_USERDATAIMAGE_PARTITION_SIZE := 12381585408
 BOARD_FLASH_BLOCK_SIZE := 4096
 TARGET_USERIMAGES_USE_EXT4 := true
 
-# Hardware tunables
-BOARD_HARDWARE_CLASS := device/samsung/superior/cmhw
 
 # Egl
 BOARD_EGL_CFG := device/samsung/superior/configs/egl.cfg
@@ -73,9 +71,6 @@ TARGET_USE_CUSTOM_LUN_FILE_PATH := "/sys/class/android_usb/f_mass_storage/lun%d/
 BOARD_PROVIDES_LIBRIL := true
 BOARD_MODEM_TYPE := xmm6262
 BOARD_MOBILEDATA_INTERFACE_NAME := "pdp0"
-
-#BOOTANIMATION
-PRODUCT_BOOTANIMATION := vendor/cm/prebuilt/common/bootanimation/720.zip
 
 # Wifi
 BOARD_WLAN_DEVICE                := bcmdhd
