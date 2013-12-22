@@ -33,7 +33,9 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/fstab.superior:root/fstab.superior \
     $(LOCAL_PATH)/rootdir/init.superior.usb.rc:root/init.superior.usb.rc \
     $(LOCAL_PATH)/rootdir/init.superior.rc:root/init.superior.rc \
-    $(LOCAL_PATH)/rootdir/ueventd.superior.rc:root/ueventd.superior.rc
+    $(LOCAL_PATH)/rootdir/ueventd.superior.rc:root/ueventd.superior.rc \
+    $(LOCAL_PATH)/rootdir/ueventd.superior.rc:recovery/root/ueventd.superior.rc \
+    $(LOCAL_PATH)/rootdir/twrp.fstab:recovery/root/etc/twrp.fstab
 
 # Audio
 PRODUCT_COPY_FILES += \

@@ -6,6 +6,8 @@ on early-init
 
 on init
 # Vibetonz
+    export PATH /sbin
+    export LD_LIBRARY_PATH .:/sbin
     export VIBE_PIPE_PATH /dev/pipes
     mkdir /dev/pipes 0771 shell shell
 	
