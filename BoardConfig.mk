@@ -37,14 +37,14 @@ TARGET_KERNEL_SOURCE := kernel/samsung/piranha
 TARGET_KERNEL_CONFIG := omni_superior_defconfig
 
 # External SGX Module
-SGX_MODULES:
+SGX_544_MODULES:
 	make clean -C device/samsung/omap4-common/pvr-source/eurasiacon/build/linux2/omap4430_android
 	cp $(TARGET_KERNEL_SOURCE)/drivers/video/omap2/omapfb/omapfb.h $(KERNEL_OUT)/drivers/video/omap2/omapfb/omapfb.h
 	make -j8 -C device/samsung/omap4-common/pvr-source/eurasiacon/build/linux2/omap4430_android ARCH=arm KERNEL_CROSS_COMPILE=arm-eabi- CROSS_COMPILE=arm-eabi- KERNELDIR=$(KERNEL_OUT) TARGET_PRODUCT="blaze_tablet" BUILD=release TARGET_SGX=544sc PLATFORM_VERSION=4.0
 	mv $(KERNEL_OUT)/../../target/kbuild/pvrsrvkm_sgx544_112.ko $(KERNEL_MODULES_OUT)
 	$(ARM_EABI_TOOLCHAIN)/arm-eabi-strip --strip-unneeded $(KERNEL_MODULES_OUT)/pvrsrvkm_sgx544_112.ko
 
-TARGET_KERNEL_MODULES += SGX_MODULES
+TARGET_KERNEL_MODULES += SGX_544_MODULES
 
 # Init
 TARGET_PROVIDES_INIT := true
