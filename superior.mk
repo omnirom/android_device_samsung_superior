@@ -150,7 +150,8 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.opengles.version=131072 \
     ro.zygote.disable_gl_preload=1 \
-    ro.bq.gpu_to_cpu_unsupported=1
+    ro.bq.gpu_to_cpu_unsupported=1 \
+    ro.hwui.disable_scissor_opt=false
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.sf.lcd_density=320
