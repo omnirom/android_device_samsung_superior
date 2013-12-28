@@ -58,3 +58,6 @@ $(call add-clean-step, rm -rf $(OUT_DIR)/target/product/superior/system/etc/asou
 $(call add-clean-step, rm -rf $(OUT_DIR)/target/product/superior/system/usr/share/alsa)
 $(call add-clean-step, rm -rf $(OUT_DIR)/target/product/superior/obj/PACKAGING/systemimage_intermediates)
 $(call add-clean-step, rm -rf $(OUT_DIR)/target/product/superior/obj/SHARED_LIBRARIES/libaudio_intermediates)
+$(call add-clean-step, rm -rf $(OUT_DIR)/target/product/superior/system/vendor/lib/egl/libEGL_POWERVR_SGX540_120.so)
+$(call add-clean-step, rm -rf $(OUT_DIR)/target/product/superior/system/vendor/lib/egl/libGLESv1_CM_POWERVR_SGX540_120.so)
+$(call add-clean-step, rm -rf $(OUT_DIR)/target/product/superior/system/vendor/lib/egl/libGLESv2_POWERVR_SGX540_120.so)
