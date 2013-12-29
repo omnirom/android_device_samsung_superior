@@ -78,6 +78,7 @@ PRODUCT_PACKAGES += \
     macloader \
     SamsungServiceMode \
     PinyinIME \
+    libemoji \
     tinyplay \
     OmniTorch
 
