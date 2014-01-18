@@ -28,12 +28,6 @@ DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 PRODUCT_AAPT_CONFIG := normal hdpi xhdpi
 PRODUCT_AAPT_PREF_CONFIG := xhdpi
 
-#Workaround for EGL blob
-PRODUCT_COPY_FILES += \
-    vendor/samsung/omap4-common/proprietary/system/vendor/lib/egl/libEGL_POWERVR_SGX544_112.so:system/vendor/lib/egl/libEGL_POWERVR_SGX540_120.so \
-    vendor/samsung/omap4-common/proprietary/system/vendor/lib/egl/libGLESv1_CM_POWERVR_SGX544_112.so:system/vendor/lib/egl/libGLESv1_CM_POWERVR_SGX540_120.so \
-    vendor/samsung/omap4-common/proprietary/system/vendor/lib/egl/libGLESv2_POWERVR_SGX544_112.so:system/vendor/lib/egl/libGLESv2_POWERVR_SGX540_120.so
-
 # Init files
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/fstab.superior:root/fstab.superior \
