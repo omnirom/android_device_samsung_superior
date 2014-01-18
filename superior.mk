@@ -28,6 +28,12 @@ DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 PRODUCT_AAPT_CONFIG := normal hdpi xhdpi
 PRODUCT_AAPT_PREF_CONFIG := xhdpi
 
+#Workaround for EGL blob
+PRODUCT_COPY_FILES += \
+    vendor/samsung/omap4-common/proprietary/system/vendor/lib/egl/libEGL_POWERVR_SGX544_112.so:system/vendor/lib/egl/libEGL.so \
+    vendor/samsung/omap4-common/proprietary/system/vendor/lib/egl/libGLESv1_CM_POWERVR_SGX544_112.so:system/vendor/lib/egl/libGLESv1_CM.so \
+    vendor/samsung/omap4-common/proprietary/system/vendor/lib/egl/libGLESv2_POWERVR_SGX544_112.so:system/vendor/lib/egl/libGLESv2.so
+
 # Init files
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/fstab.superior:root/fstab.superior \
@@ -142,10 +148,7 @@ PRODUCT_COPY_FILES += \
 	frameworks/native/data/etc/com.android.nfc_extras.xml:system/etc/permissions/com.android.nfc_extras.xml
 
 PRODUCT_COPY_FILES += \
-    device/samsung/superior/configs/nfcee_access.xml:system/etc/nfcee_access.xml \
-    device/samsung/superior/egl/libEGL.so:system/lib/egl/libEGL.so \
-    device/samsung/superior/egl/libGLESv1_CM.so:system/lib/egl/libGLESv1_CM.so \
-    device/samsung/superior/egl/libGLESv2.so:system/lib/egl/libGLESv2.so
+    device/samsung/superior/configs/nfcee_access.xml:system/etc/nfcee_access.xml
 
 # Feature live wallpaper
 PRODUCT_COPY_FILES += \
