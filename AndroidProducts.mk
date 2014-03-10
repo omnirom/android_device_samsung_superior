@@ -16,5 +16,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/aosp_superior.mk \
     $(LOCAL_DIR)/omni_superior.mk
